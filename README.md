@@ -88,7 +88,7 @@ Once you have server resources projected into Azure with Azure Arc, you can star
 
 * [Deploying Custom Script Extension to Azure Arc Linux and Windows VMs using Extension Management](azure_arc_servers_jumpstart/docs/arc_vm_extension_customscript_arm.md)
 
-* [Deploying Microsoft Monitoring Agent Extension (MMA) to Azure Arc Linux and Windows VMs using Azure Policies](azure_arc_servers_jumpstart/docs/arc_policies_mma.md)
+* [Manage Arc Servers with Azure Policy](azure_arc_servers_jumpstart/docs/arc_policies_mma.md)
  
 * [Integrate Azure Security Center with Azure Arc enabled Servers](azure_arc_servers_jumpstart/docs/arc_securitycenter.md)
 
