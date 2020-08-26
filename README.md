@@ -30,7 +30,7 @@ With Azure Arc, Fabrikam are able to project resources and register them into Az
   <img src="img/architecture_white.png" width="90%"/>
 </p>
 
-## Lab 2 - Azure Arc enabled Servers
+## Lab - Azure Arc enabled Servers
 
 The below deployment scenarios will guide you through onboarding various Windows and Linux server deployments to Azure with Azure Arc. 
 
@@ -38,7 +38,7 @@ The below deployment scenarios will guide you through onboarding various Windows
 
 **Disclaimer: Azure Arc enabled Servers is currently in Public Preview.**
 
-#### 
+#### creating virtual machines and connecing to Azure Arc
 
 The following examples can be used to connect existing Windows or Linux servers to Azure with Azure Arc. Use these if you already have existing servers that you want to project into Azure. in our lab you will need to create a Resouce group called "on-prem" and deploy a windows and linux server in that resource group , this will mimic connecting on-premises virtual machines to azure Arc. please create both the windows and linux virtual machines before using the below links to connect the virtual machines to Azure Arc
 
