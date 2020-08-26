@@ -46,38 +46,6 @@ The following examples can be used to connect existing Windows or Linux servers 
 
 * [Connect an existing Windows machine to Azure Arc](azure_arc_servers_jumpstart/docs/onboard_server_win.md)
 
-#### Vagrant
-
-If you don't have any existing servers available, you can use [Vagrant](https://www.vagrantup.com/) to host a new server locally and onboard it to Azure. This will allow you to simulate "on-premises" servers from your local machine. 
-
-* [Deploy a local Ubuntu VM and connect it to Azure Arc using Vagrant](azure_arc_servers_jumpstart/docs/local_vagrant_ubuntu.md)
-
-* [Deploy a local Windows 10 VM and connect it to Azure Arc using Vagrant](azure_arc_servers_jumpstart/docs/local_vagrant_windows.md)
-
-#### Amazon Web Services (AWS)
-
-Azure Arc can project servers into Azure from any public cloud. The following guides provide end-to-end deployment of new Linux servers in AWS EC2 and onboarding to Azure with Azure Arc using [Terraform](https://www.terraform.io/).
-
-* [Deploy an AWS EC2, Ubuntu VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/aws_terraform_ubuntu.md)
-
-* [Deploy an AWS Amazon Linux 2 VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/aws_terraform_al2.md)
-
-#### Google Cloud Platform (GCP)
-
-The following guides provide end-to-end deployment of new Windows or Linux servers in Google Cloud and onboarding to Azure with Azure Arc using [Terraform](https://www.terraform.io/).
-
-* [Deploy a GCP Ubuntu VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/gcp_terraform_ubuntu.md)
-
-* [Deploy a GCP Windows Server VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/gcp_terraform_windows.md)
-
-#### VMware
-
-The following guides provide end-to-end deployment of new Windows or Linux servers in VMWare and onboarding to Azure with Azure Arc using [Terraform](https://www.terraform.io/).
-
-* [Deploy a VMware vSphere Ubuntu Server VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/vmware_terraform_ubuntu.md)
-
-* [Deploy a VMware vSphere Windows Server VM and connect it to Azure Arc using Terraform](azure_arc_servers_jumpstart/docs/vmware_terraform_winsrv.md)
-
 #### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases
 
 Once you have server resources projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the servers as native Azure resources. The following guides show examples of using Azure management tools such as resource tags, Azure Policy, Log Analytics, and more with Azure Arc servers.
