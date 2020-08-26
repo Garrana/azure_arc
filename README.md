@@ -62,7 +62,7 @@ Once you have server resources projected into Azure with Azure Arc, you can star
 
 * [Integrate Azure Sentinel with Azure Arc enabled Servers](azure_arc_servers_jumpstart/docs/arc_azuresentinel.md)
 
-## Azure Arc enabled Kubernetes
+## optional - Azure Arc enabled Kubernetes
 
 The below deployment options are focused on Azure Arc enabled Kubernetes. They are designed to quickly spin up a Kubernetes cluster that is ready to be projected in Azure Arc and ready for use with Azure native tooling. 
 
@@ -133,40 +133,6 @@ Once you have Kubernetes clusters projected into Azure with Azure Arc, you can s
 * [Integrate Azure Monitor for Containers with GKE as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/gke_monitor.md)
 
 * [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes ](azure_arc_k8s_jumpstart/docs/gke_policy.md)
-
-## Azure Arc enabled Data Services
-
-The below deployment options are focused on Azure Arc enabled Data Services. They are designed to quickly spin up Azure data services in Kubernetes that are ready to be projected in Azure Arc and ready for use with Azure native tooling.
-
-**Disclaimer: Azure Arc enabled Data Services is currently in Private Preview.**
-
-#### Data Services on Azure Kubernetes Service (AKS)
-
-If you do not yet have a Kubernetes cluster, the following examples walk through creating an AKS cluster to simulate an "on-premises" or other cloud platform's Kubernetes cluster and deploy Azure Arc Data Services on top of it.
-
-* [Azure Arc Data Controller Vanilla Deployment on AKS using Azure ARM template](azure_arc_data_jumpstart/docs/aks_dc_vanilla_arm_template.md)
-
-* [Azure SQL Managed Instance Deployment on AKS using Azure ARM template](azure_arc_data_jumpstart/docs/aks_mssql_mi_arm_template.md)
-
-* [Azure PostgreSQL Hyperscale Deployment on AKS using Azure ARM template](azure_arc_data_jumpstart/docs/aks_postgresql_hyperscale_arm_template.md)
-
-#### Data Services on AWS Elastic Kubernetes Service (EKS)
-
-If you do not yet have a Kubernetes cluster, the following examples walk through creating an EKS cluster and deploy Azure Arc Data Services on top of it.
-
-* [Azure Arc Data Controller Vanilla Deployment on EKS using Terraform](azure_arc_data_jumpstart/docs/eks_dc_vanilla_terraform.md)
-
-#### Data Services on GCP Google Kubernetes Engine (GKE)
-
-If you do not yet have a Kubernetes cluster, the following examples walk through creating a GKE cluster and deploy Azure Arc Data Services on top of it.
-
-* [Azure Arc Data Controller Vanilla Deployment on GKE using Terraform](azure_arc_data_jumpstart/docs/gke_dc_vanilla_terraform.md)
-
-#### Data Services on Upstream Kubernetes (Kubeadm)
-
-If you do not yet have a Kubernetes cluster, the following examples walk through creating an single-node Kubernetes cluster to simulate an "on-premises" cluster and deploy Azure Arc Data Services on top of it.
-
-* [Azure Arc Data Controller Vanilla Deployment on Ubuntu Kubeadm VM using Azure ARM template](azure_arc_data_jumpstart/docs/kubeadm_dc_vanilla_arm_template.md)
 
 # Repository Roadmap
 
