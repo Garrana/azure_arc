@@ -82,34 +82,6 @@ If you do not yet have a Kubernetes cluster, the following examples walk through
 
 * [Deploy AKS cluster and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/aks_terraform.md)
 
-#### Amazon Elastic Kubernetes Service (EKS)
-
-This example uses Terraform to deploy an EKS cluster on AWS and connect it to Azure with Azure Arc.
-
-* [Deploy EKS cluster and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/eks_terraform.md)
-
-#### Google Kubernetes Engine (GKE)
-
-This example uses Terraform to deploy a GKE cluster on Google Cloud and connect it to Azure with Azure Arc.
-
-* [Deploy GKE cluster and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/gke_terraform.md)
-
-#### Rancher k3s
-
-These examples deploy [Rancher k3s](https://github.com/rancher/k3s) on an Azure VM or VMware and onboards the cluster with Azure Arc. 
-
-* [Deploy Rancher k3s on an Azure VM and connect it to Azure Arc using Azure ARM template](azure_arc_k8s_jumpstart/docs/rancher_k3s_azure_arm_template.md)
-
-* [Deploy Rancher k3s on an Azure VM and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/rancher_k3s_azure_terraform.md)
-
-* [Deploy Rancher k3s on a VMware vSphere VM and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/rancher_k3s_vmware_terraform.md)
-
-#### Azure Red Hat OpenShift (ARO) V4
-
-Azure Arc can also support Azure Red Hat OpenShift (ARO). This example uses Terraform to deploy a new ARO cluster and onboards it to Azure with Azure Arc.
-
-* [Deploy Azure Redhat Openshift Cluster and connect it to Azure Arc using automation](azure_arc_k8s_jumpstart/docs/aro_script.md)
-
 #### Azure Arc enabled Kubernetes - Day-2 Scenarios & Use-Cases
 
 Once you have Kubernetes clusters projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the clusters as native Azure resources. The following guides show examples of using Azure management tools such as Azure Monitor, GitOps configurations, and Azure Policy.
@@ -124,15 +96,6 @@ Once you have Kubernetes clusters projected into Azure with Azure Arc, you can s
 
 * [Apply GitOps configurations on AKS as an Azure Arc Connected Cluster using Azure Policy for Kubernetes ](azure_arc_k8s_jumpstart/docs/aks_policy.md)
 
-##### GKE
-
-* [Deploy GitOps configurations and perform basic GitOps flow on GKE as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/gke_gitops_basic.md)
-
-* [Deploy GitOps configurations and perform Helm-based GitOps flow on GKE as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/gke_gitops_helm.md)
-
-* [Integrate Azure Monitor for Containers with GKE as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/gke_monitor.md)
-
-* [Apply GitOps configurations on GKE as an Azure Arc Connected Cluster using Azure Policy for Kubernetes ](azure_arc_k8s_jumpstart/docs/gke_policy.md)
 
 # Repository Roadmap
 
