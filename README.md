@@ -30,7 +30,7 @@ With Azure Arc, Fabrikam are able to project resources and register them into Az
   <img src="img/architecture_white.png" width="90%"/>
 </p>
 
-## Azure Arc enabled Servers
+## Lab - Azure Arc enabled Servers
 
 The below deployment scenarios will guide you through onboarding various Windows and Linux server deployments to Azure with Azure Arc. 
 
@@ -62,7 +62,7 @@ Once you have server resources projected into Azure with Azure Arc, you can star
 
 * [Integrate Azure Sentinel with Azure Arc enabled Servers](azure_arc_servers_jumpstart/docs/arc_azuresentinel.md)
 
-## optional - Azure Arc enabled Kubernetes
+## optional Lab - Azure Arc enabled Kubernetes
 
 The below deployment options are focused on Azure Arc enabled Kubernetes. They are designed to quickly spin up a Kubernetes cluster that is ready to be projected in Azure Arc and ready for use with Azure native tooling. 
 
