@@ -42,6 +42,15 @@ The below deployment scenarios will guide you through onboarding various Windows
 
 The following examples can be used to connect existing Windows or Linux servers to Azure with Azure Arc. Use these if you already have existing servers that you want to project into Azure. as a prerequiste you will need to create a Resouce group called mimicing on-premiese virtual machines"on-prem" and deploy a windows and linux server in that resource group , this will mimic connecting on-premises virtual machines to azure Arc. please create both the windows and linux virtual machines before using the below links to connect the virtual machines to Azure Arc
 
+##### creating virtual machines 
+you can use the below guide to create a virtual machine on azure 
+
+* .[creating a linux virtual machine on azure].(https://docs.microsoft.com/bs-cyrl-ba/azure/virtual-machines/linux/quick-create-portal)
+
+* .[creating a Windows virtual machine on azure].(https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal)
+
+##### connecting the virtual machines to Azure Arc
+
 * [Connect an existing Linux server to Azure Arc](azure_arc_servers_jumpstart/docs/onboard_server_linux.md)
 
 * [Connect an existing Windows machine to Azure Arc](azure_arc_servers_jumpstart/docs/onboard_server_win.md)
