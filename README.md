@@ -45,7 +45,7 @@ The following examples can be used to connect existing Windows or Linux servers 
 ##### creating virtual machines 
 you can use the below guide to create a virtual machine on azure 
 
-* .[creating a linux virtual machine on azure].(https://docs.microsoft.com/bs-cyrl-ba/azure/virtual-machines/linux/quick-create-portal)
+* [Creating a linux virtual machine on azure](https://docs.microsoft.com/bs-cyrl-ba/azure/virtual-machines/linux/quick-create-portal)
 
 * .[creating a Windows virtual machine on azure].(https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal)
 
