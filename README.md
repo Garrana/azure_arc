@@ -38,7 +38,7 @@ The below deployment scenarios will guide you through onboarding various Windows
 
 **Disclaimer: Azure Arc enabled Servers is currently in Public Preview.**
 
-#### creating virtual machines and connecing to Azure Arc
+#### Step 1 - creating virtual machines and connecing to Azure Arc
 
 The following examples can be used to connect existing Windows or Linux servers to Azure with Azure Arc. Use these if you already have existing servers that you want to project into Azure. in our lab you will need to create a Resouce group called "on-prem" and deploy a windows and linux server in that resource group , this will mimic connecting on-premises virtual machines to azure Arc. please create both the windows and linux virtual machines before using the below links to connect the virtual machines to Azure Arc
 
@@ -46,7 +46,7 @@ The following examples can be used to connect existing Windows or Linux servers 
 
 * [Connect an existing Windows machine to Azure Arc](azure_arc_servers_jumpstart/docs/onboard_server_win.md)
 
-#### Azure Arc enabled Servers - Day-2 Scenarios & Use-Cases
+#### Step 2 - Azure Arc enabled Servers - Scenarios & Use-Cases
 
 Once you have server resources projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the servers as native Azure resources. The following guides show examples of using Azure management tools such as resource tags, Azure Policy, Log Analytics, and more with Azure Arc servers.
 
