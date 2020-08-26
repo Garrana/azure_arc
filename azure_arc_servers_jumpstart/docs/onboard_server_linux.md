@@ -61,12 +61,3 @@ Upon completion, you will have your Linux server, connected as a new Azure Arc r
 
 ![](../img/onboard_server_linux/06.png)
 
-# Delete the deployment
-
-The most straightforward way is to delete the server via the Azure Portal, just select server and delete it. 
-
-![](../img/onboard_server_linux/07.png)
-
-If you want to nuke the entire environment, just delete the Azure Resource Group.
-
-![](../img/onboard_server_linux/08.png)
