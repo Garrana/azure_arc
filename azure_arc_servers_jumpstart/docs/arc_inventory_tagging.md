@@ -6,17 +6,11 @@ Azure Arc for servers allows you to manage your Windows and Linux machines hoste
 
 In this guide, we will use [Resource Graph Explorer](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query-portal) and [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to demonstrate tagging and querying server inventory across multiple clouds from a single pane of glass in Azure.
 
-*Note: This guide assumes you already deployed an Ubuntu VM in AWS and an Ubuntu VM in GCP and have connected them to Azure Arc. If you haven't, this repository offers you a way to do so in an automated fashion using these guides.*
+*Note: This guide assumes you already deployed an Ubuntu VM in Azure simulating the vm running on AWS and have connected them to Azure Arc. If you haven't, this repository offers you a way to do so in an automated fashion using these guides.*
 * [GCP Ubuntu VM](../docs/gcp_terraform_ubuntu.md)
 * [AWS Ubuntu VM](../docs/aws_terraform_ubntu.md)
 
 # Prerequisites
-
-* Clone this repo
-
-    ```terminal
-    git clone https://github.com/microsoft/azure_arc.git
-    ```
 
 * [Install or update Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest). **Azure CLI should be running version 2.7** or later. Use ```az --version``` to check your current installed version.
 
@@ -61,7 +55,7 @@ We will be using Resource Graph Explorer during this exercise to query and view 
 
 Now that we have created a basic taxonomy structure, we will apply tags to our Arc server resources. In this guide, we will demonstrate tagging resources in both AWS and GCP. If you only have resources in one of these providers, you can skip to the appropriate section for AWS or GCP.
 
-## Tag Arc-connected AWS Ubuntu server
+## Tag Arc-connected Ubuntu server
 
 * In AZ CLI, run the following commands to apply the "Hosting Platform : AWS" tag to your Arc AWS servers. 
 
@@ -77,21 +71,6 @@ Now that we have created a basic taxonomy structure, we will apply tags to our A
 
     ![](../img/inventory/07.png)
 
-## Tag Arc-connected GCP Ubuntu server
-
-* In AZ CLI, run the following commands to apply the "Hosting Platform : GCP" tag to your Arc GCP servers. 
-
-    *Note: If you connected your GCP servers using a method other than the one described in [this tutorial](../docs/gcp_terraform_ubuntu.md), then you will need to adjust the values for `gcpResourceGroup` and `gcpMachineName` to match values specific to your environment.*
-
-    ```bash
-    export gcpResourceGroup="arc-gcp-demo"
-    export gcpMachineName="arc-gcp-demo"
-    export gcpMachineResourceId="$(az resource show --resource-group $gcpResourceGroup --name $gcpMachineName --resource-type "Microsoft.HybridCompute/machines" --query id)"
-    export gcpMachineResourceId="$(echo $gcpMachineResourceId | tr -d "\"" | tr -d '\r')"
-    az resource tag --resource-group $gcpResourceGroup --ids $gcpMachineResourceId --tags "Hosting Platform"="GCP"
-    ```
-
-    ![](../img/inventory/08.png)
 
 # Query resources by tag using Resource Graph Explorer
 
@@ -116,20 +95,4 @@ Now that we have applied tags to our resources that are hosted in multiple cloud
 
     ![](../img/inventory/13.png)
 
-# Clean up environment
 
-Complete the following steps to clean up your environment.
-
-* Remove the virtual machines from each environment by following the teardown instructions from each guide.
-
-    * [GCP Ubuntu VM](../docs/gcp_terraform_ubuntu.md#teardown)
-    * [AWS Ubuntu VM](../docs/aws_terraform_ubntu.md#teardown)
-
-* Remove tags created as part of this guide by executing the following script in AZ CLI.
-    ```bash
-    az tag remove-value --name "Hosting Platform" --value "Azure"
-    az tag remove-value --name "Hosting Platform" --value "AWS" 
-    az tag remove-value --name "Hosting Platform" --value "GCP"
-    az tag remove-value --name "Hosting Platform" --value "On-premises"
-    az tag create --name "Hosting Platform"
-    ```
