@@ -14,12 +14,6 @@ In this guide, you will enable and configure Standard tier ASC on your Azure sub
 
 **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc.**
 
-**If you haven't, this repository offers you a way to do so in an automated fashion:**
-- **[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)**
-- **[AWS Ubuntu VM](aws_terraform_ubuntu.md)**
-- **[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)**
-- **[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)**
-
 # Prerequisites
 
 * Clone this repo
@@ -28,7 +22,7 @@ In this guide, you will enable and configure Standard tier ASC on your Azure sub
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-* As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure.
+* As mentioned, this guide starts at the point where you already deployed and connected VMs or bare-metal servers to Azure Arc. For this scenario, as can be seen in the screenshots below, we will be using a Google Cloud Platform (GCP) instance that has been already connected to Azure Arc and is visible as a resource in Azure. in your Lab you should be using the azure virtual machine you've created for this lab
 
     ![](../img/securitycenter/01.png)
 
@@ -124,19 +118,3 @@ Now that you have successfully onboarded ASC, you will get recommendations to he
 
     ![](../img/securitycenter/09.png)
 
-# Clean up environment
-
-Complete the following steps to clean up your environment.
-
-* Remove the virtual machines from each environment by following the teardown instructions from each guide.
-
-    - *[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)*
-    - *[AWS Ubuntu VM](aws_terraform_ubuntu.md)*
-    - *[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)*
-    - *[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)*
-
-* Remove the Log Analytics workspace by executing the following script in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
-
-    ```bash
-    az monitor log-analytics workspace delete --resource-group <Name of the Azure Resource Group> --workspace-name <Log Analytics Workspace Name> --yes
-    ```
