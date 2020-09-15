@@ -6,9 +6,7 @@ Azure Arc for servers allows you to manage your Windows and Linux machines hoste
 
 In this guide, we will use [Resource Graph Explorer](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query-portal) and [AZ CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) to demonstrate tagging and querying server inventory across multiple clouds from a single pane of glass in Azure.
 
-*Note: This guide assumes you already deployed an Ubuntu VM in Azure simulating the vm running on AWS and have connected them to Azure Arc. If you haven't, this repository offers you a way to do so in an automated fashion using these guides.*
-* [GCP Ubuntu VM](../docs/gcp_terraform_ubuntu.md)
-* [AWS Ubuntu VM](../docs/aws_terraform_ubntu.md)
+*Note: This guide assumes you already deployed an Ubuntu VM in Azure simulating the vm running on AWS and have connected them to Azure Arc. If you haven't, please do before proceeding .*
 
 # Prerequisites
 
