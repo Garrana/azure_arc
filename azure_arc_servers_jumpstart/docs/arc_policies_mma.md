@@ -6,13 +6,6 @@ In this case, you will assign a policy to audit if the Azure Arc connected machi
 
 You can use the Azure Portal, an ARM template or PowerShell script to assign policies to Azure Subscriptions or Resource Groups. In this guide, you will use an ARM template to assign built-in policies. 
 
-**Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc.**
-
-**If you haven't, this repository offers you a way to do so in an automated fashion:**
-- **[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)**
-- **[AWS Ubuntu VM](aws_terraform_ubuntu.md)**
-- **[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)**
-- **[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)**
 
 # Prerequisites
 
@@ -22,7 +15,7 @@ You can use the Azure Portal, an ARM template or PowerShell script to assign pol
     git clone https://github.com/microsoft/azure_arc.git
     ```
 
-* As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below we can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure.
+* As mentioned, this guide starts at the point where you already deployed and connected VMs or servers to Azure Arc. In the screenshots below we can see a GCP server has been connected with Azure Arc and is visible as a resource in Azure. in your Lab you would use the virtual machine you created on azure and onboarded
 
     ![](../img/vm_policies/01.png)
 
@@ -102,24 +95,3 @@ You can use the Azure Portal, an ARM template or PowerShell script to assign pol
 
   ![](../img/vm_policies/09.png)
 
-# Clean up environment
-
-Complete the following steps to clean up your environment.
-
-* Remove the virtual machines from each environment by following the teardown instructions from each guide.
-
-    - *[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)*
-    - *[AWS Ubuntu VM](aws_terraform_ubuntu.md)*
-    - *[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)*
-    - *[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)*
-
-* Remove the Azure Policy assignment by executing the following script in AZ CLI.
-
-   ```bash
-    az policy assignment delete --name 'Enable Azure Monitor for VMs' --resource-group <resource_group>
-    ```
-* Remove the Log Analytics workspace by executing the following script in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
-
-    ```bash
-    az monitor log-analytics workspace delete --resource-group <Name of the Azure Resource Group> --workspace-name <Log Analytics Workspace Name> --yes
-    ```
