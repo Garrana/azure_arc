@@ -8,12 +8,6 @@ You can use the Azure Portal, Azure CLI, an ARM template, PowerShell script or A
 
 **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc.**
 
-**If you haven't, this repository offers you a way to do so in an automated fashion:**
-- **[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)**
-- **[AWS Ubuntu VM](aws_terraform_ubuntu.md)**
-- **[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)**
-- **[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)**
-
 
 # Prerequisites
 
@@ -107,21 +101,4 @@ To deploy the ARM template, navigate to the [deployment folder](../extensions/ar
     ![](../img/vm_extension_mma/10.png)
 
     ![](../img/vm_extension_mma/11.png)
-
-# Clean up environment
-
-Complete the following steps to clean up your environment.
-
-* Remove the virtual machines from each environment by following the teardown instructions from each guide.
-
-    - *[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)*
-    - *[AWS Ubuntu VM](aws_terraform_ubuntu.md)*
-    - *[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)*
-    - *[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)*
-
-* Remove the Log Analytics workspace by executing the following command in AZ CLI. Provide the workspace name you used when creating the Log Analytics Workspace.
-
-    ```bash
-    az monitor log-analytics workspace delete --resource-group <Name of the Azure Resource Group> --workspace-name <Log Analytics Workspace Name> --yes
-    ```
     
