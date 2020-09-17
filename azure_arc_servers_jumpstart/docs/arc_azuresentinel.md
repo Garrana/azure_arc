@@ -13,12 +13,6 @@ In this guide, you will enable and configure Azure Sentinel on your Azure subscr
 
 **Note: This guide assumes you already deployed VMs or servers that are running on-premises or other clouds and you have connected them to Azure Arc.**
 
-**If you haven't, this repository offers you a way to do so in an automated fashion:**
-- **[GCP Ubuntu VM](gcp_terraform_ubuntu.md) / [GCP Windows VM](gcp_terraform_windows.md)**
-- **[AWS Ubuntu VM](aws_terraform_ubuntu.md)**
-- **[VMware Ubuntu VM](vmware_terraform_ubuntu.md) / [VMware Windows Server VM](vmware_terraform_winsrv.md)**
-- **[Local Ubuntu VM](local_vagrant_ubuntu.md) / [Local Windows VM](local_vagrant_windows.md)**
-
 # Prerequisites
 
 * Clone this repo
@@ -98,7 +92,7 @@ For servers and VMs, you can install the Microsoft Monitoring Agent (MMA) agent 
 
 # Clean up environment
 
-Complete the following steps to clean up your environment.
+Complete the following steps if you'd like to clean up your environment, otherwise proceed to the next lab
 
 * Remove the virtual machines from each environment by following the teardown instructions from each guide.
 
