@@ -30,7 +30,7 @@ With Azure Arc, Fabrikam are able to project resources and register them into Az
   <img src="img/architecture_white.png" width="90%"/>
 </p>
 
-## Lab - Azure Arc enabled Servers
+## DEMO - Azure Arc enabled Servers
 
 The below deployment scenarios will guide you through onboarding various Windows and Linux server deployments to Azure with Azure Arc. 
 
@@ -76,45 +76,6 @@ Once you have server resources projected into Azure with Azure Arc, you can star
 * [Deploying Custom Script Extension to Azure Arc Linux and Windows VMs using Extension Management](azure_arc_servers_jumpstart/docs/arc_vm_extension_customscript_arm.md)
 
 * [Integrate Azure Sentinel with Azure Arc enabled Servers](azure_arc_servers_jumpstart/docs/arc_azuresentinel.md)
-
-## optional Lab - Azure Arc enabled Kubernetes
-
-The below deployment options are focused on Azure Arc enabled Kubernetes. They are designed to quickly spin up a Kubernetes cluster that is ready to be projected in Azure Arc and ready for use with Azure native tooling. 
-
-**Disclaimer: Azure Arc enabled Kubernetes is currently in Public Preview.**
-
-#### General
-
-This example demonstrates how to connect an existing Kubernetes cluster to Arc. It assumes you already have a cluster ready to work with.
-
-* [Connect an existing Kubernetes cluster to Azure Arc](azure_arc_k8s_jumpstart/docs/onboard_k8s.md)
-
-#### Azure Kubernetes Service (AKS)
-
-If you do not yet have a Kubernetes cluster, the following examples walk through creating an AKS cluster to simulate an "on-premises" cluster. Examples are provided for deploying with either Terraform or with an ARM template.
-
-* [Deploy AKS cluster and connect it to Azure Arc using Azure ARM template](azure_arc_k8s_jumpstart/docs/aks_arm_template.md)
-
-* [Deploy AKS cluster and connect it to Azure Arc using Terraform](azure_arc_k8s_jumpstart/docs/aks_terraform.md)
-
-#### Azure Arc enabled Kubernetes - Day-2 Scenarios & Use-Cases
-
-Once you have Kubernetes clusters projected into Azure with Azure Arc, you can start to use native Azure tooling to manage the clusters as native Azure resources. The following guides show examples of using Azure management tools such as Azure Monitor, GitOps configurations, and Azure Policy.
-
-##### AKS
-
-* [Deploy GitOps configurations and perform basic GitOps flow on AKS as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/aks_gitops_basic.md)
-
-* [Deploy GitOps configurations and perform Helm-based GitOps flow on AKS as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/aks_gitops_helm.md)
-
-* [Integrate Azure Monitor for Containers with AKS as an Azure Arc Connected Cluster](azure_arc_k8s_jumpstart/docs/aks_monitor.md)
-
-* [Apply GitOps configurations on AKS as an Azure Arc Connected Cluster using Azure Policy for Kubernetes ](azure_arc_k8s_jumpstart/docs/aks_policy.md)
-
-
-# Repository Roadmap
-
-Up-to-date roadmap for the Azure Arc scenarios to be covered can be found under [this repository GitHub Project](https://github.com/microsoft/azure_arc/projects/1).
 
 # Contributing
 
