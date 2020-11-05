@@ -44,16 +44,16 @@ The following examples can be used to connect existing Windows or Linux servers 
 **please note: that on-boarding Azure Virtual machines to Azure ARC is not supported and you would need to run the below commands to be able to setup the arc agent 
 
 ##### *Windows* powershell
-<<
+
 Write-Host "Configure the OS to allow Azure Arc Agent to be deploy on an Azure VM"
 Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose
 Stop-Service WindowsAzureGuestAgent -Force -Verbose
 New-NetFirewallRule -Name BlockAzureIMDS -DisplayName "Block access to Azure IMDS" -Enabled True -Profile Any -Direction Outbound -Action Block -RemoteAddress 169.254.169.254 
->>
+
 
 
 ##### *Linux* bash 
-<<
+
 echo "Configuring walinux agent"
 sudo service walinuxagent stop
 sudo waagent -deprovision -force
@@ -65,7 +65,6 @@ sudo apt-get update
 echo "Reconfiguring Hostname"
 sudo hostname $VMNAME
 sudo -E /bin/sh -c 'echo $VMNAME > /etc/hostname'
->>
 
 ##### creating virtual machines 
 you can use the below guide to create a virtual machine on azure 
