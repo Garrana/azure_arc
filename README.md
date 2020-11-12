@@ -40,7 +40,7 @@ The below deployment scenarios will guide you through onboarding various Windows
 
 #### Step 1 - creating virtual machines and connecing to Azure Arc
 
-The following examples can be used to connect existing Windows or Linux servers to Azure with Azure Arc. Use these if you already have existing servers that you want to project into Azure. however if you don't have servers to use for the lab , you would need to create them first. as a prerequiste you will need to create a Resouce group on azure and deploy a windows and linux server in that resource group , this will mimic connecting on-premises virtual machines to azure Arc. please create both the windows and linux virtual machines before using the below links to connect the virtual machines to Azure Arc
+The following examples can be used to connect existing Windows or Linux servers to Azure with Azure Arc. Use these if you already have existing servers that you want to project into Azure. however if you don't have servers to use for the lab , you would need to create them first. as a prerequiste you will need to create a Resouce group on azure and deploy a windows and linux server in that resource group , this will mimic connecting on-premises virtual machines to azure Arc. please create both the windows and linux virtual machines before using the below links to connect the virtual machines to Azure Arc. please note that on-boarding Azure Virtual machines to Arc is nt supported and you would need to run the below commands to be able to setup the arc agent.
 
 ##### creating virtual machines 
 you can use the below guide to create a virtual machine on azure 
@@ -50,6 +50,33 @@ you can use the below guide to create a virtual machine on azure
 * [Creating a Windows virtual machine on azure](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/quick-create-portal)
 
 ##### connecting the virtual machines to Azure Arc
+
+**please note: that on-boarding Azure Virtual machines to Azure Arc is not supported and you would need to run the below commands to be able to setup the arc agent before attempting to setup the agent 
+
+###### *Windows* powershell
+
+```  
+Write-Host "Configure the OS to allow Azure Arc Agent to be deploy on an Azure VM"  
+Set-Service WindowsAzureGuestAgent -StartupType Disabled -Verbose  
+Stop-Service WindowsAzureGuestAgent -Force -Verbose  
+New-NetFirewallRule -Name BlockAzureIMDS -DisplayName "Block access to Azure IMDS" -Enabled True -Profile Any -Direction Outbound -Action Block -RemoteAddress 169.254.169.254 
+```
+
+###### *Linux* bash 
+```
+echo "Configuring walinux agent"  
+sudo service walinuxagent stop  
+sudo waagent -deprovision -force  
+sudo rm -rf /var/lib/waagent  
+echo "Configuring Firewall"  
+sudo ufw --force enable  
+sudo ufw deny out from any to 169.254.169.254  
+sudo apt-get update  
+echo "Reconfiguring Hostname"  
+sudo hostname $VMNAME  
+sudo -E /bin/sh -c 'echo $VMNAME > /etc/hostname'  
+```
+
 
 The script to automate the download and installation, and to establish the connection with Azure Arc, is available from the Azure portal. To complete the process, follow the following links:
 
